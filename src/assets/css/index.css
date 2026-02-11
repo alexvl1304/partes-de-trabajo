@@ -18,37 +18,38 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 51px; /* antes 3.2em = 16*3.2≈51px */
   line-height: 1.1;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 10px 19px; /* antes 0.6em 1.2em ≈ 10px 19px */
+  font-size: 16px;    /* antes 1em ≈ 16px */
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +60,49 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
+    background-color: #f1f1f1;
+  }
+}
+
+/* Cabezera */
+.cabezera {
+  width: 100%;
+  display: flex;
+  gap: 48px; /* antes 2rem ≈ 32px */
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.cabezera a {
+  font-weight: 500;
+  font-size: 16px; /* antes 1rem */
+  color: inherit;
+  text-decoration: none;
+  padding: 10px 0px; /* antes 0.4rem 0.8rem ≈ 6px 13px */
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cabezera a:hover {
+  background-color: #2a2a2a;
+  color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  .cabezera {
     background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cabezera a:hover {
+    background-color: #eaeaea;
   }
 }

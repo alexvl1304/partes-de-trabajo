@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import '../assets/css/login.css'
+import { Cabezera } from "./cabezera";
 
 
 export function Login() {
@@ -28,15 +30,20 @@ export function Login() {
   }
 
   return (
-    <div>
-      <p>You must log in to view the page at {from}</p>
+    <div >
+      <div className="login-container">
+        <p className="login-message">
+          You must log in to view the page at <strong>{from}</strong>
+        </p>
 
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username: <input name="username" type="text" />
-        </label>{" "}
-        <button type="submit">Login</button>
-      </form>
+        <form onSubmit={handleSubmit} className="login-form">
+          <label className="login-label">
+            Username:
+            <input name="username" type="text" className="login-input" />
+          </label>
+          <button type="submit" className="login-button">Login</button>
+        </form>
+      </div>
     </div>
   );
 }

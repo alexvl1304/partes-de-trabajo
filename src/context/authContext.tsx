@@ -41,28 +41,6 @@ export function useAuth() {
   return React.useContext(AuthContext);
 }
 
-// function AuthStatus() {
-//   let auth = useAuth();
-//   let navigate = useNavigate();
-
-//   if (!auth.user) {
-//     return <p>You are not logged in.</p>;
-//   }
-
-//   return (
-//     <p>
-//       Welcome {auth.user}!{" "}
-//       <button
-//         onClick={() => {
-//           auth.signout(() => navigate("/"));
-//         }}
-//       >
-//         Sign out
-//       </button>
-//     </p>
-//   );
-// }
-
 export function RequireAuth({ children }: { children: React.JSX.Element }) {
   let auth = useAuth();
   let location = useLocation();
@@ -87,7 +65,7 @@ export function RequireSignedOut({ children }: { children: React.JSX.Element }) 
     // trying to go to when they were redirected. This allows us to send them
     // along to that page after they login, which is a nicer user experience
     // than dropping them off on the home page.
-    return <Navigate to="/protected" state={{ from: location }} replace />;
+    return <Navigate to="/user" state={{ from: location }} replace />;
   }
 
   return children;
