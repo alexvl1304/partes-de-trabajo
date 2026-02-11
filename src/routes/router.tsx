@@ -1,16 +1,28 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Login } from '../scripts/login';
+import { PublicPage } from '../screens/public';
+import { ProtectedPage } from '../screens/protected';
+import { Route, Routes } from 'react-router-dom';
+import { RequireAuth, RequireSignedOut } from '../context/authContext';
 
-// import Login from "../screens/login";
-// import App from "../App";
-
-// export function AppRouter() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/profile" element={<Profile />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
+export function AppRouter() {
+    return (
+        <Routes>
+            <Route path="/" element={<PublicPage />} />
+            <Route
+                path="/login"
+                element={
+                    <RequireSignedOut>
+                        <Login />
+                    </RequireSignedOut>
+                } />
+            <Route
+                path="/protected"
+                element={
+                    <RequireAuth>
+                        <ProtectedPage />
+                    </RequireAuth>
+                }
+            />
+        </Routes>
+    )
+}
