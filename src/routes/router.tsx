@@ -1,10 +1,11 @@
 import { Login } from '../screens/login';
 import { PublicPage } from '../screens/public';
 import { UserPage } from '../screens/userPage';
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { RequireAuth, RequireSignedOut } from '../context/authContext';
 import { Cabezera } from '../screens/cabezera';
 
+//componente que organiza las rutas de la aplicación, todas dentro de Cabecera. 
 export function AppRouter() {
     return (
         <Routes>

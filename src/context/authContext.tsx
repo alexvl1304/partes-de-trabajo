@@ -10,6 +10,7 @@ interface AuthContextType {
 
 let AuthContext = React.createContext<AuthContextType>(null!);
 
+//
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   let [user, setUser] = React.useState<any>(() => {
     return localStorage.getItem("user");
@@ -37,10 +38,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
+//usar contexto para la sesion del usuario
 export function useAuth() {
   return React.useContext(AuthContext);
 }
 
+//Envoltura para componentes de paginas que requieran sesion iniciada
 export function RequireAuth({ children }: { children: React.JSX.Element }) {
   let auth = useAuth();
   let location = useLocation();
@@ -56,6 +59,7 @@ export function RequireAuth({ children }: { children: React.JSX.Element }) {
   return children;
 }
 
+//Envoltura para componentes de paginas que requieran no tener sesion iniciada
 export function RequireSignedOut({ children }: { children: React.JSX.Element }) {
   let auth = useAuth();
   let location = useLocation();
