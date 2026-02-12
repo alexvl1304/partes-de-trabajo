@@ -11,7 +11,7 @@ export function UserPage() {
         {
             nombre: "trab1",
             fechaInicio: new Date(),
-            fechaFin: new Date()
+            fechaFin: new Date(2026, 4, 20)
         },
         {
             nombre: "trab2",

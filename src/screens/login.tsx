@@ -37,7 +37,7 @@ export function Login() {
         Inicia sesión para acceder a tu portal
       </p>
 
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form" method="POST">
         <label className="label">
           Nombre de usuario:
           <input name="username" type="text" className="input" />

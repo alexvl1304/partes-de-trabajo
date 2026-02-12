@@ -1,36 +1,36 @@
 .trabajo-card-container {
-    max-width: 100%; /* antes 75%, ahora un ancho fijo razonable */
-    margin: 15px auto; /* centrado horizontal */
-    padding: 32px; /* antes 2rem ≈ 32px */
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 32px;
     border-radius: 12px;
     background-color: #272727;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    text-align: center; /* centra títulos y mensajes */
+    text-align: center;
 }
 
 .trabajo-card-title {
     margin-top: 0;
-    margin-bottom: 8px; /* antes 0.5rem ≈ 8px */
-    font-size: 20px; /* antes 1.8rem ≈ 29px */
+    margin-bottom: 8px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .trabajo-card-message {
-    font-size: 16px; /* antes 0.9rem ≈ 14px */
-    margin-bottom: 24px; /* antes 1.5rem ≈ 24px */
+    font-size: 16px;
+    margin-bottom: 24px;
 }
 
 .trabajo-card-left-text {
-    font-size: 16px; /* antes 0.9rem ≈ 14px */
-    margin-bottom: 24px; /* antes 1.5rem ≈ 24px */
+    font-size: 16px;
+    margin-bottom: 24px;
     text-align: start;
 }
 
 .trabajo-card-form {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* antes 1rem ≈ 16px */
-    align-items: center; /* centra inputs si quieres */
+    gap: 16px;
+    align-items: center;
 }
 
 .trabajo-card-label {
@@ -38,13 +38,13 @@
 }
 
 .trabajo-card-input {
-    padding: 10px 12px; /* antes 10px */
+    padding: 10px 12px;
     border-radius: 8px;
     border: 1px solid #444;
     background-color: #2a2a2a;
     color: inherit;
     font-size: 16px;
-    width: 85%; /* ancho fijo relativo al container */
+    width: 85%;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .trabajo-card-button {
-    margin-top: 8px; /* antes 0.5rem ≈ 8px */
+    margin-top: 8px;
     padding: 10px 20px;
     font-size: 16px;
 }

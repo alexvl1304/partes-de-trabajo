@@ -1,6 +1,7 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type Trabajo from "../scripts/trabajo";
 import DrawingCanvas from "../componentes/draw-canvas";
+import ProcesarActualizarTrabajo from "../scripts/procesar-actualizar-trabajo";
 
 export function DetallesTrabajo() {
     const { id } = useParams();
@@ -13,7 +14,7 @@ export function DetallesTrabajo() {
         {
             nombre: "trab1",
             fechaInicio: new Date(),
-            fechaFin: new Date()
+            fechaFin: new Date(2026, 4, 20)
         },
         {
             nombre: "trab2",
@@ -45,13 +46,22 @@ export function DetallesTrabajo() {
 
     return (
         <div className="container">
-            <p className="trabajo-card-title">{trabajo.nombre}</p>
-            <p style={{ color: estadoColor, textShadow: " 0px 0px 20px " + estadoColor }}>{estado}</p>
-            <div style={{ textAlign: "start" }}>
-                <p>Inicio: <strong> {(trabajo.fechaInicio == null) ? "-- --" : trabajo.fechaInicio!.toDateString()}</strong></p>
-                <p>Fin: <strong> {(trabajo.fechaFin == null) ? "-- --" : trabajo.fechaFin!.toDateString()}</strong></p>
-            </div>
-            <DrawingCanvas></DrawingCanvas>
+            <form onSubmit={() => {ProcesarActualizarTrabajo(trabajo)}} action={() => { navigate("/user") }}>
+                <p className="trabajo-card-title">{trabajo.nombre}</p>
+                <p style={{ color: estadoColor, textShadow: " 0px 0px 20px " + estadoColor }}>{estado}</p>
+                <div style={{ textAlign: "start" }}>
+                    <p>Inicio: <input
+                        type="date"
+                        value={trabajo.fechaInicio ? new Date(trabajo.fechaInicio).toISOString().split("T")[0] : ""} />
+                    </p>
+                    <p>Fin: <input
+                        type="date"
+                        value={trabajo.fechaFin ? new Date(trabajo.fechaFin).toISOString().split("T")[0] : ""} />
+                    </p>
+                </div>
+                <button style={{margin: "10px"}} type="submit" className="button">Actualizar</button>
+            </form>
+            <DrawingCanvas />
         </div>
     );
 }

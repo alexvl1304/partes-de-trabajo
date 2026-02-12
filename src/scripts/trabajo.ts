@@ -1,5 +1,5 @@
 export default interface Trabajo {
-    nombre: String,
+    nombre: string,
     fechaInicio: Date | null,
     fechaFin: Date | null,
 };
