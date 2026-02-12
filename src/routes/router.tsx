@@ -4,6 +4,7 @@ import { UserPage } from '../screens/userPage';
 import { Route, Routes } from 'react-router-dom';
 import { RequireAuth, RequireSignedOut } from '../context/authContext';
 import { Cabezera } from '../screens/cabezera';
+import { DetallesTrabajo } from '../screens/detalles-trabajo';
 
 //componente que organiza las rutas de la aplicación, todas dentro de Cabecera. 
 export function AppRouter() {
@@ -23,6 +24,14 @@ export function AppRouter() {
                     element={
                         <RequireAuth>
                             <UserPage />
+                        </RequireAuth>
+                    }
+                />
+                <Route
+                    path="/trabajo/:id"
+                    element={
+                        <RequireAuth>
+                            <DetallesTrabajo />
                         </RequireAuth>
                     }
                 />

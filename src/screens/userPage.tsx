@@ -1,17 +1,40 @@
 import { useAuth } from "../context/authContext";
 import "../assets/css/App.css"
+import { ListaTrabajos } from "../componentes/lista-trabajos";
+import type Trabajo from "../scripts/trabajo";
 
 export function UserPage() {
 
     const auth = useAuth();
 
+    const trabajos: Trabajo[] = [
+        {
+            nombre: "trab1",
+            fechaInicio: new Date(),
+            fechaFin: new Date()
+        },
+        {
+            nombre: "trab2",
+            fechaInicio: null,
+            fechaFin: null
+        },
+        {
+            nombre: "trab3",
+            fechaInicio: new Date(),
+            fechaFin: null
+        }
+    ]
+
     return (
         <div className="container">
-            <p className="title">Usuario:</p>
+            <p className="title">Hola, {auth.user}</p>
 
-            <h4>{auth.user}</h4>
+            <button className="cerrar-sesion-button" onClick={() => auth.signout(() => window.location.reload())}>Cerrar sesión</button>
 
-            <button onClick={() => auth.signout(() => window.location.reload())}>signout</button>
+            <p className="left-text">Trabajos asignados:</p>
+
+            <ListaTrabajos trabajos={trabajos} />
+
         </div>
     );
 }
