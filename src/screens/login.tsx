@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-import '../assets/css/login.css'
+import '../assets/css/App.css'
 
 export function Login() {
   let navigate = useNavigate();
@@ -28,28 +28,26 @@ export function Login() {
   }
 
   return (
-    <div >
-      <div className="login-container">
-        <p className="login-title">
-          <strong>Iniciar sesión</strong>
-        </p>
+    <div className="container">
+      <p className="title">
+        Iniciar sesión
+      </p>
 
-        <p className="login-message">
-          Inicia sesión para acceder a tu portal
-        </p>
+      <p className="message">
+        Inicia sesión para acceder a tu portal
+      </p>
 
-        <form onSubmit={handleSubmit} className="login-form">
-          <label className="login-label">
-            Nombre de usuario:
-            <input name="username" type="text" className="login-input" />
-          </label>
-          <label className="login-label">
-            Contraseña:
-            <input name="username" type="text" className="login-input" />
-          </label>
-          <button type="submit" className="login-button">Acceder</button>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit} className="form">
+        <label className="label">
+          Nombre de usuario:
+          <input name="username" type="text" className="input" />
+        </label>
+        <label className="label">
+          Contraseña:
+          <input name="username" type="text" className="input" />
+        </label>
+        <button type="submit" className="button">Acceder</button>
+      </form>
     </div>
   );
 }

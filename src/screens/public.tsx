@@ -1,4 +1,5 @@
 import { useAuth } from "../context/authContext";
+import "../assets/css/App.css"
 
 export function PublicPage() {
 
@@ -6,11 +7,11 @@ export function PublicPage() {
 
 
   return (
-    <>
+    <div className="container">
       <h3>Public</h3>
 
-      <h4>{(auth.user == null)? "No has iniciado sesión" : auth.user}</h4>
+      <h4>{(auth.user == null)? "No has iniciado sesión" : "Usuario: " + auth.user}</h4>
     
-    </>
+    </div>
   );
 }

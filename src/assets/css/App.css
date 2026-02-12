@@ -1,0 +1,67 @@
+.container {
+    max-width: 75%; /* antes 75%, ahora un ancho fijo razonable */
+    margin: 80px auto; /* centrado horizontal */
+    padding: 32px; /* antes 2rem ≈ 32px */
+    border-radius: 12px;
+    background-color: #272727;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center; /* centra títulos y mensajes */
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 8px; /* antes 0.5rem ≈ 8px */
+    font-size: 20px; /* antes 1.8rem ≈ 29px */
+    font-weight: bold;
+}
+
+.message {
+    font-size: 16px; /* antes 0.9rem ≈ 14px */
+    margin-bottom: 24px; /* antes 1.5rem ≈ 24px */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* antes 1rem ≈ 16px */
+    align-items: center; /* centra inputs si quieres */
+}
+
+.label {
+    text-align: start;
+}
+
+.input {
+    padding: 10px 12px; /* antes 10px */
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: inherit;
+    font-size: 16px;
+    width: 85%; /* ancho fijo relativo al container */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #646cff;
+    box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.3);
+}
+
+.button {
+    margin-top: 8px; /* antes 0.5rem ≈ 8px */
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+    .container {
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .input {
+        background-color: #f3f3f3;
+        border: 1px solid #ccc;
+    }
+}

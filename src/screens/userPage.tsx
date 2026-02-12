@@ -1,12 +1,13 @@
 import { useAuth } from "../context/authContext";
+import "../assets/css/App.css"
 
 export function UserPage() {
 
     const auth = useAuth();
 
     return (
-        <div>
-            <h3>User</h3>
+        <div className="container">
+            <p className="title">Usuario:</p>
 
             <h4>{auth.user}</h4>
 
