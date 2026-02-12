@@ -30,16 +30,24 @@ export function Login() {
   return (
     <div >
       <div className="login-container">
+        <p className="login-title">
+          <strong>Iniciar sesión</strong>
+        </p>
+
         <p className="login-message">
-          You must log in to view the page at <strong>{from}</strong>
+          Inicia sesión para acceder a tu portal
         </p>
 
         <form onSubmit={handleSubmit} className="login-form">
           <label className="login-label">
-            Username:
+            Nombre de usuario:
             <input name="username" type="text" className="login-input" />
           </label>
-          <button type="submit" className="login-button">Login</button>
+          <label className="login-label">
+            Contraseña:
+            <input name="username" type="text" className="login-input" />
+          </label>
+          <button type="submit" className="login-button">Acceder</button>
         </form>
       </div>
     </div>

@@ -11,12 +11,11 @@
 .login-title {
     margin-top: 0;
     margin-bottom: 8px; /* antes 0.5rem ≈ 8px */
-    font-size: 29px; /* antes 1.8rem ≈ 29px */
+    font-size: 20px; /* antes 1.8rem ≈ 29px */
 }
 
 .login-message {
-    font-size: 14px; /* antes 0.9rem ≈ 14px */
-    opacity: 0.8;
+    font-size: 16px; /* antes 0.9rem ≈ 14px */
     margin-bottom: 24px; /* antes 1.5rem ≈ 24px */
 }
 
@@ -25,6 +24,10 @@
     flex-direction: column;
     gap: 16px; /* antes 1rem ≈ 16px */
     align-items: center; /* centra inputs si quieres */
+}
+
+.login-label {
+    text-align: start;
 }
 
 .login-input {
