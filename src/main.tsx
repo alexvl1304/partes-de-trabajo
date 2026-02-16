@@ -1,12 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './assets/css/index.css'
-import App from './screens/App.tsx'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+//import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import App from './screens/App';
 
-//npm run dev -- --host
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )
+
+//serviceWorkerRegistration.register();
