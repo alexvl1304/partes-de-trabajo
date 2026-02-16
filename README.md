@@ -1,6 +1,6 @@
 # Partes de trabajo
 
-Aplicación web progresiva para realizar partes de trabajo de forma online y offline.
+Aplicación web progresiva para realizar partes de trabajo de forma online y offline. Desarrollada con Typescript React + Vite
 
 # Instalación
 
