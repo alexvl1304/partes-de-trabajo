@@ -10,7 +10,7 @@ interface AuthContextType {
 
 let AuthContext = React.createContext<AuthContextType>(null!);
 
-//
+//Provider para manejar el estado del usuario y las funciones de inicio y cierre de sesion
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   let [user, setUser] = React.useState<any>(() => {
     return localStorage.getItem("user");
