@@ -3,14 +3,14 @@ import { PublicPage } from '../screens/public';
 import { UserPage } from '../screens/userPage';
 import { Route, Routes } from 'react-router-dom';
 import { RequireAuth, RequireSignedOut } from '../context/authContext';
-import { Cabezera } from '../screens/cabezera';
+import { Cabecera } from '../screens/cabecera';
 import { DetallesTrabajo } from '../screens/detalles-trabajo';
 
 //componente que organiza las rutas de la aplicación, todas dentro de Cabecera. 
 export function AppRouter() {
     return (
         <Routes>
-            <Route element={<Cabezera />}>
+            <Route element={<Cabecera />}>
                 <Route path="/" element={<PublicPage />} />
                 <Route
                     path="/login"

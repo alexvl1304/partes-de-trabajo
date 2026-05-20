@@ -70,7 +70,7 @@ button:focus-visible {
   }
 }
 
-.cabezera {
+.cabecera {
   width: 100%;
   display: flex;
   gap: 48px;
@@ -80,7 +80,7 @@ button:focus-visible {
   border-bottom: 1px solid #333;
 }
 
-.cabezera a {
+.cabecera a {
   font-weight: 500;
   font-size: 16px;
   color: inherit;
@@ -90,18 +90,18 @@ button:focus-visible {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.cabezera a:hover {
+.cabecera a:hover {
   background-color: #2a2a2a;
   color: #646cff;
 }
 
 @media (prefers-color-scheme: light) {
-  .cabezera {
+  .cabecera {
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
   }
 
-  .cabezera a:hover {
+  .cabecera a:hover {
     background-color: #eaeaea;
   }
 }

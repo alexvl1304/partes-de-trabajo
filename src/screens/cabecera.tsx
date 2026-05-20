@@ -1,9 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 
-export function Cabezera() {
+export function Cabecera() {
     return (
         <div >
-            <div  className="cabezera">
+            <div className="cabecera">
                 <Link to="/">Public Page</Link>
                 <Link to="/user">User Page</Link>
             </div>
